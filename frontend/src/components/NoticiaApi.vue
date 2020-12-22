@@ -7,7 +7,7 @@
       v-bind:key="index"
     >
       <v-img
-        class="white--text align-end"
+        class="black--text align-end"
         height="200px"
         v-bind:src="noticia.image"
         alt=""
@@ -40,10 +40,10 @@ export default {
   mounted() {
     axios
       .get(
-        "https://gnews.io/api/v4/search?q=example&country=au&token=a8f4357881532af17f0324b5422963d7"
+        "http://api.mediastack.com/v1/news?access_key=02138df3789ab549576448516fc0c194&languages=es&categories=technology&limit=20"
       )
       .then((response) => {
-        this.noticias = response.data.articles.slice(1, 5);
+        this.noticias = response.data.data.slice(10,13);
         console.log(this.noticias);
       });
   },

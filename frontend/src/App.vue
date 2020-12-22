@@ -19,7 +19,7 @@
         <v-icon>mdi-cash</v-icon>
       </v-btn>
 
-       <v-btn to='/Login'>
+       <v-btn to='/login'>
         <span>Login</span>
 
         <v-icon>mdi-login-variant</v-icon>
