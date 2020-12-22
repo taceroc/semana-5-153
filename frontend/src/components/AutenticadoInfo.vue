@@ -39,7 +39,7 @@
     >
       <v-list>
         <v-list-item
-        v-bind:to="{name: 'Home'}"
+        v-bind:to="{name: 'Inicio'}"
         >
           <v-list-item-icon>
             <v-icon>mdi-home</v-icon>
@@ -126,7 +126,7 @@ export default {
     methods:{
       salir(){
         this.$store.dispatch('salir');
-        this.$router.push({name: 'Home'})
+        this.$router.push({name: 'Inicio'})
       }
     }
 }
