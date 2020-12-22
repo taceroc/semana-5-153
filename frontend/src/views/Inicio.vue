@@ -7,7 +7,9 @@
           Soluciones 153 Call-Center</h1>
     </v-img>
 
+<div class="pt-6">
     <noticia-api/>
+</div>
   </div>
 </template>
 
