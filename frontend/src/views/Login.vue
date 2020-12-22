@@ -12,7 +12,6 @@ export default {
     name: 'Login',
     components: {
         TheLogin
-    }
-    
+    }  
 }
 </script>

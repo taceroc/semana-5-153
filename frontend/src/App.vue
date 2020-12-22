@@ -1,5 +1,5 @@
 <template>
-<v-app>
+  <v-app>
     <v-bottom-navigation :value="value" color="teal" grow width=100% height=36px>
       <v-btn to='/'> 
         <span>Inicio</span>
@@ -18,6 +18,7 @@
 
         <v-icon>mdi-cash</v-icon>
       </v-btn>
+
 
        <!-- <v-btn to='/login'>
         <span>Login</span>
@@ -63,29 +64,37 @@
     <v-app>
       <router-view />
     </v-app>
+
     <div>
       <the-footer/>
       </div>
     
   </v-app>
- <!-- <v-app>
-        <router-view></router-view>
-  </v-app> -->
+
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
+import HelloWorld from "./components/HelloWorld";
+import TheFooter from "./components/TheFooter"
 
 export default {
-  name: 'App',
+  name: "App",
 
   components: {
     HelloWorld,
+    TheFooter,
   },
-    methods:{
-      salir(){
-        this.$store.dispatch('salir');
-      }
-    },
+
+  data: () => ({value: 1 
+    //
+  }),
 };
 </script>
+<style scoped>
+.menu {
+  width: 500px;
+  height: 100px;
+}
+</style>
+
+
