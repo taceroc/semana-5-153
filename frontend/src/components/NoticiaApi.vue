@@ -13,7 +13,7 @@
         alt=""
       >
       </v-img>
-        <v-card-title>{{ noticia.title }}</v-card-title>
+        <v-card-title class="mb-2 text-left" style="font-size: 22px !important">{{ noticia.title }}</v-card-title>
 
       <v-card-subtitle class="pb-0"> </v-card-subtitle>
 
@@ -46,7 +46,7 @@ export default {
         "http://api.mediastack.com/v1/news?access_key=02138df3789ab549576448516fc0c194&languages=es&categories=technology&limit=20"
       )
       .then((response) => {
-        this.noticias = response.data.data.slice(10,13);
+        this.noticias = response.data.data.slice(13,16);
         console.log(this.noticias);
       });
   },

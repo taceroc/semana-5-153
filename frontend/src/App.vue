@@ -85,9 +85,11 @@ export default {
     TheFooter,
   },
 
-  data: () => ({value: 1 
-    //
-  }),
+    methods:{
+      salir(){
+        this.$store.dispatch('salir');
+      }
+    },
 };
 </script>
 <style scoped>
