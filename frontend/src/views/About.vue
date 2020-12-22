@@ -51,5 +51,3 @@ export default {
 .titulo1{
   text-align: center;
 }
-
-</style>

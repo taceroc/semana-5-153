@@ -10,6 +10,7 @@
 <div class="pt-6">
     <noticia-api/>
 </div>
+
   </div>
 </template>
 
@@ -17,6 +18,7 @@
 // @ is an alias to /src
 import HelloWorld from '@/components/HelloWorld.vue'
 import NoticiaApi from '../components/NoticiaApi.vue'
+
 
 export default {
   name: 'Inicio',
@@ -33,3 +35,4 @@ export default {
   }
 
 </style>
+

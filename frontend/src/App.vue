@@ -19,21 +19,58 @@
         <v-icon>mdi-cash</v-icon>
       </v-btn>
 
-       <v-btn to='/login'>
+
+       <!-- <v-btn to='/login'>
         <span>Login</span>
 
         <v-icon>mdi-login-variant</v-icon>
-      </v-btn>
+      </v-btn> -->
+
+      <template v-if="!this.$store.state.user">
+          <router-link style="text-decoration: none" :to="{name: 'Login'}" class="mr-5 ml-5" exact> 
+            <v-btn target="_blank"> Login 
+              <v-icon>mdi-login-variant</v-icon>
+              </v-btn> 
+            </router-link>
+          </template>
+
+           <template v-else-if="this.$store.state.user.rol == 'Administrador' || this.$store.state.user.rol == 'Vendedor' || this.$store.state.user.rol == 'Almacenero'">
+
+            <router-link style="text-decoration: none" :to="{name: 'Autenticado'}" class="mr-5 ml-5" exact> 
+              <v-btn target="_blank"> Login 
+                <v-icon>mdi-login-variant</v-icon>
+              </v-btn>
+              </router-link>
+          </template>
+
+            <template v-else>
+
+            <router-link style="text-decoration: none" :to="{name: 'Inicio'}" class="mr-5 ml-5" exact> 
+              <v-btn target="_blank"> Login 
+                <v-icon>mdi-login-variant</v-icon>
+              </v-btn>
+              </router-link>
+          </template>
+
+            <template v-if="this.$store.state.user">
+         
+            <v-btn icon class="mr-5" @click="salir()"> 
+                <span>Salir</span> </v-btn> 
+          </template>
+
+
+
     </v-bottom-navigation>
-    <v-main>
+    <v-app>
       <router-view />
-    </v-main>
+    </v-app>
+
     <div>
       <the-footer/>
       </div>
     
   </v-app>
-  
+
 </template>
 
 <script>
@@ -59,3 +96,5 @@ export default {
   height: 100px;
 }
 </style>
+
+
