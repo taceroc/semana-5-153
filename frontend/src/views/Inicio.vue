@@ -1,6 +1,11 @@
 <template>
   <div class="home">
-    <img class='banner' src=https://secureservercdn.net/198.71.233.41/35g.43f.myftpupload.com/wp-content/uploads/2015/10/cropped-AllCallsBanner.png alt="">
+
+    <v-img style="opacity: 0.65" class='banner black-text align-end' src=https://secureservercdn.net/198.71.233.41/35g.43f.myftpupload.com/wp-content/uploads/2015/10/cropped-AllCallsBanner.png alt="">
+       
+       <h1 class="text-right mr-2 my-auto" style="font-size: 100px">
+          Soluciones 153 Call-Center</h1>
+    </v-img>
 
     <noticia-api/>
   </div>
@@ -24,4 +29,5 @@ export default {
     width: 100%;
     height: auto;
   }
+
 </style>

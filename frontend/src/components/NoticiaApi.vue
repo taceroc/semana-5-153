@@ -17,10 +17,10 @@
 
       <v-card-subtitle class="pb-0"> </v-card-subtitle>
 
-      <v-card-text class="text--primary">
+      <v-card-text class="text--primary p-2 text-justify">
         <div>{{ noticia.description }}</div>
 
-        <div>
+        <div class="text-center">
           <a v-bind:href="noticia.url" target="_blank">Noticia completa</a>
         </div>
       </v-card-text>
@@ -43,7 +43,7 @@ export default {
         "https://gnews.io/api/v4/search?q=example&country=au&token=a8f4357881532af17f0324b5422963d7"
       )
       .then((response) => {
-        this.noticias = response.data.articles.slice(0, 4);
+        this.noticias = response.data.articles.slice(1, 5);
         console.log(this.noticias);
       });
   },
