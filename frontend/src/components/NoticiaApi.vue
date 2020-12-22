@@ -2,7 +2,7 @@
   <div class="noticias_card">
     <v-card
       class="mx-auto"
-      width="20%"
+      width="28%"
       v-for="(noticia, index) of noticias"
       v-bind:key="index"
     >
@@ -12,18 +12,21 @@
         v-bind:src="noticia.image"
         alt=""
       >
-        <v-card-title>{{ noticia.title }}</v-card-title>
       </v-img>
+        <v-card-title>{{ noticia.title }}</v-card-title>
 
       <v-card-subtitle class="pb-0"> </v-card-subtitle>
 
-      <v-card-text class="text--primary p-2 text-justify">
+      <v-card-text class="text--primary p-2 text-justify mb-5">
         <div>{{ noticia.description }}</div>
 
-        <div class="text-center">
-          <a v-bind:href="noticia.url" target="_blank">Noticia completa</a>
-        </div>
       </v-card-text>
+
+
+
+        <div class="align-self-end">
+          <a class="text-align" v-bind:href="noticia.url" target="_blank">Noticia completa</a>
+        </div>
     </v-card>
   </div>
 </template>
@@ -53,5 +56,17 @@ export default {
 .noticias_card{
     display: flex;
     margin-bottom: 10px;
+}
+.align-self-end {
+  position:absolute;
+  bottom:0;
+  left:150px;
+  padding-bottom: 4px;
+}
+
+.v-application a{
+  color: teal !important ;
+  background-color: transparent;
+  text-decoration: none;
 }
 </style>
